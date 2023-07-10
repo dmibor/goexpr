@@ -90,9 +90,12 @@ func (prov *provider) init(datafile string) error {
 		if err != nil {
 			return fmt.Errorf("Unable to parse end IP %v: %v", row[1], err)
 		}
-		asn, err := strconv.Atoi(row[3])
-		if err != nil {
-			return fmt.Errorf("Unable to parse asn %v: %v", row[3], err)
+		asn := -1
+		if row[3] != "-" {
+			asn, err = strconv.Atoi(row[3])
+			if err != nil {
+				return fmt.Errorf("Unable to parse asn %v: %v", row[3], err)
+			}
 		}
 		entry := &entry{
 			start: uint64(start),
