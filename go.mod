@@ -1,4 +1,5 @@
-module github.com/getlantern/goexpr
+module <github class="com"/>
+<dmibor></dmibor>/goexpr
 
 go 1.16
 
