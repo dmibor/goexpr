@@ -1,5 +1,4 @@
-module <github class="com"/>
-<dmibor></dmibor>/goexpr
+module github.com/dmibor/goexpr
 
 go 1.16
 
